@@ -7,7 +7,8 @@ export const Welcome = defineComponent({
     return () => <div class={s.wrapper}>
       <header>
       <svg>
-          <use xlinkHref='#SillyCat'></use>
+          <use xlinkHref='#SillyCat'>
+          </use>
         </svg>
         <h1>SillyCat记账</h1>
       </header>
