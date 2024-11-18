@@ -1,7 +1,7 @@
 :root {
   --amount-text: #53a867;
-  --button-bg: #d9a7c7;
   --button-bg-danger: #E10505;
+  --button-bg: #d9a7c7;
   --button-border-color: #ddd;
   --button-font-size: 18px;
   --button-height: 48px;
@@ -17,13 +17,16 @@
   --input-min-height: 48px;
   --input-radius: var(--button-radius);
   --input-shadow: rgba(0, 0, 0, 0.25);
+  --list-amount-text: var(--amount-text);
+  --list-tag-text: #333;
+  --list-time-text: var(--date-text);
+  --main: #5c33be;
   --navbar-bg-end: var(--welcome-bg-end);
   --navbar-bg-start: var(--welcome-bg-start);
   --navbar-text: white;
   --number-button-bg-important: #d9a7c7;
   --number-button-bg: white;
   --number-button-text-important: white;
-  --main: #5c33be;
   --overlay-bg: white;
   --overlay-mask-bg: rgba(0, 0, 0, 0.5);
   --overlay-user-bg: #d9a7c7;
@@ -31,6 +34,10 @@
   --tabs-indicator-bg: rgba(255, 255, 255, 0.5);
   --tag-bg: #EFEFEF;
   --top-safe-area-height: 24px;
+  --total-bg: #252A43;
+  --total-expenses: #53A867;
+  --total-income: #FE7275;
+  --total-text: white;
   --transition-duration: 0.5s;
   --welcome-bg-end: #d9a7c7;
   --welcome-bg-start: #fffcdc;
