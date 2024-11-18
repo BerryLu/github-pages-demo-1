@@ -8,6 +8,7 @@ import { Time } from '../../shared/time';
 import s from './ItemList.module.scss';
 import { ItemSummary } from './ItemSummary';
 import { Button } from '../../shared/Button';
+import { OverlayIcon } from '../../shared/Overlay';
 export const ItemList = defineComponent({
   setup: (props, context) => {
     const refSelected = ref('本月')
@@ -44,7 +45,7 @@ export const ItemList = defineComponent({
       <MainLayout>{
         {
           title: () => 'SillyCat记账',
-          icon: () => <Icon name="menu" />,
+          icon: () => <OverlayIcon />,
           default: () => <>
             <Tabs classPrefix={'customTabs'} v-model:selected={refSelected.value}
               onUpdate:selected={onSelect}>
