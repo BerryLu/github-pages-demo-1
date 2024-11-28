@@ -27,6 +27,7 @@ type Item = {
   id: number;
   user_id: number;
   amount: number;
+  tags?: Tag[],
   tags_id: number[];
   happen_at: string;
   kind: expenses | income;
