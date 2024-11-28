@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import { mockItemCreate, mockItemIndex, mockSession, mockTagEdit, mockTagIndex, mockTagShow } from "../mock/mock";
+import { mockItemCreate, mockItemIndex, mockItemIndexBalance, mockSession, mockTagEdit, mockTagIndex, mockTagShow } from "../mock/mock";
 
 type GetConfig = Omit<AxiosRequestConfig, 'params' | 'url' | 'method'>
 type PostConfig = Omit<AxiosRequestConfig, 'url' | 'data' | 'method'>
@@ -30,7 +30,7 @@ export class Http {
 const mock = (response: AxiosResponse) => {
   if (location.hostname !== 'localhost'
     && location.hostname !== '127.0.0.1'
-    && location.hostname !== '192.168.1.123') { return false }
+    && location.hostname !== '192.168.3.57') { return false }
   switch (response.config?.params?._mock) {
     case 'tagIndex':
       [response.status, response.data] = mockTagIndex(response.config)
@@ -49,6 +49,9 @@ const mock = (response: AxiosResponse) => {
       return true
     case 'itemIndex':
       [response.status, response.data] = mockItemIndex(response.config)
+      return true
+    case 'itemIndexBalance':
+      [response.status, response.data] = mockItemIndexBalance(response.config)
       return true
   }
   return false
